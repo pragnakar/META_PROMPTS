@@ -1,0 +1,20 @@
+[submodule "LLM_NATIVE_SOFTWARE_ENGINEERING"]
+	path = LLM_NATIVE_SOFTWARE_ENGINEERING
+	url = https://github.com/pragnakar/LLM_NATIVE_SOFTWARE_ENGINEERING.git
+	branch = master
+[submodule "Deployment_Engineering"]
+	path = Deployment_Engineering
+	url = https://github.com/pragnakar/Deployment_Engineering.git
+	branch = main
+[submodule "DevOps"]
+	path = DevOps
+	url = https://github.com/pragnakar/DevOps.git
+	branch = master
+[submodule "Database"]
+	path = Database
+	url = https://github.com/pragnakar/Database.git
+	branch = master
+[submodule "UI-UX"]
+	path = UI-UX
+	url = https://github.com/pragnakar/UI-UX.git
+	branch = master
