@@ -189,6 +189,6 @@ MIT
 
 ## Author
 
-Pragnakar Pedapenki — [pragnakar@gmail.com](mailto:pragnakar@gmail.com)
+Pragnakar Pedapenki ( https://x.com/pragnakar )
 
 GitHub: [github.com/pragnakar](https://github.com/pragnakar)
