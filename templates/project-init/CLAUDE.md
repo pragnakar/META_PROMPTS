@@ -7,7 +7,7 @@ This project uses the **Meta-Prompts** protocol for AI-assisted software develop
 Read the bootstrap protocol and follow its initialization sequence:
 
 ```
-[META_PROMPTS_PATH]/BOOTSTRAP.md
+meta_prompts/BOOTSTRAP.md
 ```
 
 The bootstrap file contains step-by-step instructions. Do not write code until the initialization sequence is complete and the human has approved the Phase 1 specification.
@@ -29,8 +29,4 @@ Do not restart initialization. Pick up exactly where the last log entry left off
 
 ## Meta-Prompts location
 
-The Meta-Prompts protocol files are at: `[META_PROMPTS_PATH]/`
-
----
-
-*Replace `[META_PROMPTS_PATH]` with the actual path to the meta-prompts submodule in this project (e.g., `meta_prompts`).*
+`meta_prompts/` — if the submodule was added at a different path, update this file accordingly.

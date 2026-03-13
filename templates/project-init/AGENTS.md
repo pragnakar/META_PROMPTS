@@ -8,7 +8,7 @@ This project uses the **Meta-Prompts** protocol for AI-assisted software develop
 
 Read and follow the bootstrap protocol at:
 ```
-[META_PROMPTS_PATH]/BOOTSTRAP.md
+meta_prompts/BOOTSTRAP.md
 ```
 
 Do not write code, create application files, or make architectural decisions until the initialization sequence in `BOOTSTRAP.md` is complete and the human has approved the Phase 1 specification.
@@ -24,8 +24,8 @@ Report to the human what you found and resume from the last log entry.
 
 ## Meta-Prompts location
 
-`[META_PROMPTS_PATH]/` — contains 11 meta-prompts covering the full software development lifecycle.
+`meta_prompts/` — contains 11 meta-prompts covering the full software development lifecycle.
 
 ---
 
-*Replace `[META_PROMPTS_PATH]` with the actual submodule path (e.g., `meta_prompts`).*
+*Replace `meta_prompts` with the actual submodule path (e.g., `meta_prompts`).*

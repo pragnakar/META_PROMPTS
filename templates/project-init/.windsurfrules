@@ -2,10 +2,10 @@
 
 This project uses the Meta-Prompts protocol for AI-assisted software development.
 
-If `.build/` does not exist: read `[META_PROMPTS_PATH]/BOOTSTRAP.md` and follow the initialization sequence before writing any code.
+If `.build/` does not exist: read `meta_prompts/BOOTSTRAP.md` and follow the initialization sequence before writing any code.
 
 If `.build/` exists: read `.build/AGENT.md`, `.build/SPEC.md`, and `.build/BUILD_LOG.md` in that order, then resume from the last log entry.
 
 Never write application code before the Phase 1 specification is approved by the human.
 
-Meta-prompts location: [META_PROMPTS_PATH]/
+Meta-prompts location: meta_prompts/

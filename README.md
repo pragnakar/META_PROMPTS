@@ -229,13 +229,15 @@ Add this repo as a submodule to your project, then copy the integration files fo
 | GitHub Copilot | `templates/project-init/.github/copilot-instructions.md` |
 
 ```bash
-# Add as submodule
+# Add as submodule (use the path meta_prompts — the entry point files expect this)
 git submodule add https://github.com/pragnakar/META_PROMPTS meta_prompts
 
-# Copy your tool's entry point to project root (example for Claude Code)
-cp meta_prompts/templates/project-init/CLAUDE.md .
-# Then replace [META_PROMPTS_PATH] with meta_prompts in the copied file
+# Copy your tool's entry point to the project root — no edits needed
+cp meta_prompts/templates/project-init/CLAUDE.md .          # Claude Code
+cp meta_prompts/templates/project-init/AGENTS.md .           # any agent
 ```
+
+If you place the submodule at a different path, update `meta_prompts/` in the copied file to match.
 
 ### For a New Project (manual setup)
 

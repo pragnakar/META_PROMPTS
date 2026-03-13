@@ -12,7 +12,7 @@ This project uses the Meta-Prompts protocol for AI-assisted software development
 
 Before taking any action, check for `.build/` in the project root.
 
-**No `.build/`:** Read `[META_PROMPTS_PATH]/BOOTSTRAP.md`. Follow the initialization sequence completely. Do not write application code until the human approves the Phase 1 spec.
+**No `.build/`:** Read `meta_prompts/BOOTSTRAP.md`. Follow the initialization sequence completely. Do not write application code until the human approves the Phase 1 spec.
 
 **`.build/` exists:** Read `.build/AGENT.md` → `.build/SPEC.md` → `.build/BUILD_LOG.md`. Resume from the last BUILD_LOG entry.
 
@@ -25,4 +25,4 @@ Before taking any action, check for `.build/` in the project root.
 - Structured JSON logs with `trace_id` field in all services
 - One phase at a time — verify and get approval before moving to the next
 
-Meta-prompts: `[META_PROMPTS_PATH]/`
+Meta-prompts: `meta_prompts/`
