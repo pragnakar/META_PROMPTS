@@ -21,19 +21,19 @@ Software engineering with AI is becoming a **protocol problem**, not a coding pr
 Each meta-prompt is an independent, evolving repository covering a distinct domain of the software lifecycle. They work together as a composable system — the parent meta-prompt invokes companions as project needs arise.
 
 ```
-┌──────────────────────────────────────────────────┐
-│  LLM-Native Software Engineering                  │
-│  (Architecture, development methodology,          │
-│   verification discipline, build protocols)       │
-│                                                    │
-│  Invokes companion meta-prompts as needed:        │
-└──────┬──────────┬──────────┬──────────┬───────────┘
-       │          │          │          │
-       ▼          ▼          ▼          ▼
-┌───────────┐ ┌────────┐ ┌──────────┐ ┌───────┐
-│Deployment │ │ DevOps │ │ Database │ │ UI/UX │
-│Engineering│ │        │ │          │ │       │
-└───────────┘ └────────┘ └──────────┘ └───────┘
+┌──────────────────────────────────────────────────────────────┐
+│  LLM-Native Software Engineering                              │
+│  (Architecture, development methodology,                      │
+│   verification discipline, build protocols)                   │
+│                                                                │
+│  Invokes companion meta-prompts as needed:                    │
+└──┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬───┘
+   │      │      │      │      │      │      │      │      │
+   ▼      ▼      ▼      ▼      ▼      ▼      ▼      ▼      ▼
+┌──────┐┌──────┐┌──────┐┌─────┐┌──────┐┌─────┐┌─────┐┌─────┐┌─────┐
+│Deploy││DevOps││  DB  ││UI/UX││ Sec  ││MLOps││ API ││ Test││ Doc │
+│ Eng  ││      ││      ││     ││ Eng  ││     ││Design││Strat││     │
+└──────┘└──────┘└──────┘└─────┘└──────┘└─────┘└─────┘└─────┘└─────┘
 ```
 
 | Meta-Prompt | Purpose | Repository |
@@ -43,11 +43,11 @@ Each meta-prompt is an independent, evolving repository covering a distinct doma
 | **DevOps** | Runtime operations, monitoring, alerting, incident response, reliability engineering | [GitHub](https://github.com/pragnakar/DevOps) |
 | **Database** | Technology selection, schema design, indexing, query optimization, backup and recovery, data security | [GitHub](https://github.com/pragnakar/Database) |
 | **UI/UX** | User-centered design, information architecture, accessibility, responsive design, design systems | [GitHub](https://github.com/pragnakar/UI-UX) |
-| **Security Engineering** | Threat modeling, secure coding, vulnerability management | [GitHub](https://github.com/pragnakar/Security_Engineering) |
-| **MLOps** | Model training pipelines, experiment tracking, model deployment | [GitHub](https://github.com/pragnakar/MLOps) |
-| **API Design** | RESTful and GraphQL design standards, versioning, documentation | [GitHub](https://github.com/pragnakar/API_Design) |
-| **Testing Strategy** | Test architecture, coverage strategy, performance testing, test automation | [GitHub](https://github.com/pragnakar/Testing-Strategy) |
-| **Documentation** | Technical writing standards, API docs, user guides | [GitHub](https://github.com/pragnakar/Documentation) |
+| **Security Engineering** | Threat modeling, secure coding, input validation, cryptography, dependency security, secrets management | [GitHub](https://github.com/pragnakar/Security_Engineering) |
+| **MLOps** | Experiment tracking, data versioning, training pipelines, model registry, drift monitoring, ML governance | [GitHub](https://github.com/pragnakar/MLOps) |
+| **API Design** | Resource modeling, versioning, error handling, pagination, rate limiting, OpenAPI specifications | [GitHub](https://github.com/pragnakar/API_Design) |
+| **Testing Strategy** | Test architecture, coverage strategy, performance testing, contract testing, AI-specific verification | [GitHub](https://github.com/pragnakar/Testing-Strategy) |
+| **Documentation** | Technical writing, ADRs, API docs, architecture docs, runbooks, documentation-as-code | [GitHub](https://github.com/pragnakar/Documentation) |
 
 ---
 
@@ -64,6 +64,16 @@ Each meta-prompt is an independent, evolving repository covering a distinct doma
 4. When your project has a user interface, invoke **UI/UX** to establish design principles, accessibility standards, and interaction patterns.
 
 5. When your project approaches production, invoke **DevOps** to establish monitoring, alerting, incident response, and reliability practices.
+
+6. When security is a requirement (it always is), invoke **Security Engineering** to define threat models, secure coding patterns, and vulnerability management.
+
+7. When your project includes machine learning, invoke **MLOps** to establish reproducible training pipelines, model registry, drift monitoring, and serving infrastructure.
+
+8. When designing APIs, invoke **API Design** to ensure consistent resource modeling, versioning, error handling, and documentation.
+
+9. When defining test strategy, invoke **Testing Strategy** to establish the test pyramid, coverage targets, performance testing, and CI pipeline configuration.
+
+10. When documentation is a deliverable, invoke **Documentation** to define documentation architecture, ADRs, and documentation-as-code pipelines.
 
 ### For an AI Coding Agent
 
@@ -134,27 +144,47 @@ Meta_Prompts/
 ├── Database/                            ← Companion: data layer
 │   ├── Database.md
 │   └── README.md
-├── UI-UX/                              ← Companion: interface design
+├── UI-UX/                               ← Companion: interface design
 │   ├── UI-UX.md
 │   └── README.md
-├── Security_Engineering/                ← Companion: security engineering
+├── Security_Engineering/                ← Companion: security
 │   ├── Security_Engineering.md
 │   └── README.md
-├── MLOps/                              ← Companion: machine learning operations
+├── MLOps/                               ← Companion: ML operations
 │   ├── MLOps.md
 │   └── README.md
-├── API_Design/                         ← Companion: API design
+├── API_Design/                          ← Companion: API design
 │   ├── API_Design.md
 │   └── README.md
-├── Testing_Strategy/                   ← Companion: testing strategy
+├── Testing_Strategy/                    ← Companion: testing
 │   ├── Testing_Strategy.md
 │   └── README.md
-└── Documentation/                      ← Companion: documentation
+└── Documentation/                       ← Companion: documentation
     ├── Documentation.md
     └── README.md
 ```
 
-Each subdirectory is an independent git repository. They evolve separately but are designed to work together through cross-references and consistent structure.
+Each subdirectory is an independent git repository (submodule). They evolve separately but are designed to work together through cross-references and consistent structure.
+
+---
+
+## Canonical Meta-Prompt Structure
+
+Every companion meta-prompt follows the same canonical structure:
+
+| Section | Purpose |
+|---|---|
+| **Thesis** | Why this domain matters |
+| **When Invoked** | Trigger conditions for using the meta-prompt |
+| **Scope** | What it covers and explicitly does NOT cover |
+| **Principles** | Non-negotiable rules for the domain |
+| **Practices** | Concrete implementation guidance |
+| **Agent Instructions** | Do / Do NOT / Verify checklists for LLM agents |
+| **Integration Points** | How it connects to every other meta-prompt |
+| **Anti-Patterns** | Common mistakes and why they are harmful |
+| **Quick-Start Checklist** | Actionable setup checklist |
+
+This consistency means an LLM agent that understands one meta-prompt can navigate all of them.
 
 ---
 
@@ -182,24 +212,8 @@ Areas of particular interest:
 - Real-world case studies beyond the SAGE build
 - Adaptations for specific tech stacks or domains
 - Automation tooling for the .build system
-- New companion meta-prompts for uncovered domains (Security Engineering, MLOps, API Design, Testing Strategy)
+- New companion meta-prompts for uncovered domains
 - Integration patterns with CI/CD systems and planning tools
-
----
-
-## Companion Meta-Prompts
-
-The ecosystem is extensible. The following companion meta-prompts are now part of the core Meta-Prompts ecosystem (each lives in its own repository and can be invoked as needed):
-
-| Domain | Purpose |
-|---|---|
-| Security Engineering | Threat modeling, secure coding, vulnerability management |
-| MLOps | Model training pipelines, experiment tracking, model deployment |
-| API Design | RESTful and GraphQL design standards, versioning, documentation |
-| Testing Strategy | Test architecture, coverage strategy, performance testing |
-| Documentation | Technical writing standards, API docs, user guides |
-
-Each follows the same canonical structure and integrates through cross-references with the parent and relevant companions.
 
 ---
 
