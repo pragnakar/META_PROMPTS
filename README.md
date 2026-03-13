@@ -21,19 +21,19 @@ Software engineering with AI is becoming a **protocol problem**, not a coding pr
 Each meta-prompt is an independent, evolving repository covering a distinct domain of the software lifecycle. They work together as a composable system — the parent meta-prompt invokes companions as project needs arise.
 
 ```
-┌──────────────────────────────────────────────────────────────┐
-│  LLM-Native Software Engineering                              │
-│  (Architecture, development methodology,                      │
-│   verification discipline, build protocols)                   │
-│                                                                │
-│  Invokes companion meta-prompts as needed:                    │
-└──┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬───┘
-   │      │      │      │      │      │      │      │      │
-   ▼      ▼      ▼      ▼      ▼      ▼      ▼      ▼      ▼
-┌──────┐┌──────┐┌──────┐┌─────┐┌──────┐┌─────┐┌─────┐┌─────┐┌─────┐
-│Deploy││DevOps││  DB  ││UI/UX││ Sec  ││MLOps││ API ││ Test││ Doc │
-│ Eng  ││      ││      ││     ││ Eng  ││     ││Design││Strat││     │
-└──────┘└──────┘└──────┘└─────┘└──────┘└─────┘└─────┘└─────┘└─────┘
+┌───────────────────────────────────────────────────────────────────────┐
+│  LLM-Native Software Engineering                                      │
+│  (Architecture, development methodology,                              │
+│   verification discipline, build protocols)                           │
+│                                                                        │
+│  Invokes companion meta-prompts as needed:                            │
+└──┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬────┘
+   │      │      │      │      │      │      │      │      │      │
+   ▼      ▼      ▼      ▼      ▼      ▼      ▼      ▼      ▼      ▼
+┌──────┐┌──────┐┌──────┐┌─────┐┌──────┐┌─────┐┌─────┐┌─────┐┌─────┐┌─────┐
+│Deploy││DevOps││  DB  ││UI/UX││ Sec  ││MLOps││ API ││ Test││ Doc ││Scrum│
+│ Eng  ││      ││      ││     ││ Eng  ││     ││Design││Strat││     ││     │
+└──────┘└──────┘└──────┘└─────┘└──────┘└─────┘└─────┘└─────┘└─────┘└─────┘
 ```
 
 | Meta-Prompt | Purpose | Repository |
@@ -48,6 +48,7 @@ Each meta-prompt is an independent, evolving repository covering a distinct doma
 | **API Design** | Resource modeling, versioning, error handling, pagination, rate limiting, OpenAPI specifications | [GitHub](https://github.com/pragnakar/API_Design) |
 | **Testing Strategy** | Test architecture, coverage strategy, performance testing, contract testing, AI-specific verification | [GitHub](https://github.com/pragnakar/Testing-Strategy) |
 | **Documentation** | Technical writing, ADRs, API docs, architecture docs, runbooks, documentation-as-code | [GitHub](https://github.com/pragnakar/Documentation) |
+| **Scrum** | Agile planning, sprint cycle management, ceremonies, and agile accountability | [GitHub](https://github.com/pragnakar/Scrum) |
 
 ---
 
@@ -74,6 +75,8 @@ Each meta-prompt is an independent, evolving repository covering a distinct doma
 9. When defining test strategy, invoke **Testing Strategy** to establish the test pyramid, coverage targets, performance testing, and CI pipeline configuration.
 
 10. When documentation is a deliverable, invoke **Documentation** to define documentation architecture, ADRs, and documentation-as-code pipelines.
+
+11. When your project uses iterative delivery, invoke **Scrum** to establish sprint cycles, backlog management, ceremonies, velocity tracking, and Definitions of Done.
 
 ### For an AI Coding Agent
 
@@ -159,8 +162,11 @@ Meta_Prompts/
 ├── Testing_Strategy/                    ← Companion: testing
 │   ├── Testing_Strategy.md
 │   └── README.md
-└── Documentation/                       ← Companion: documentation
-    ├── Documentation.md
+├── Documentation/                       ← Companion: documentation
+│   ├── Documentation.md
+│   └── README.md
+└── Scrum/                               ← Companion: agile process
+    ├── Scrum.md
     └── README.md
 ```
 
