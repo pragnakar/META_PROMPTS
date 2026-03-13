@@ -134,7 +134,19 @@ Every element in these meta-prompts earned its place by catching a defect, preve
 
 ```
 Meta_Prompts/
+├── BOOTSTRAP.md                         ← AI entry point — imperative initialization protocol
+├── AGENTS.md                            ← Cross-agent entry point
 ├── README.md                            ← You are here
+├── templates/                           ← Ready-to-use templates
+│   ├── AGENT.md                         ← Control doc: AI directive
+│   ├── SPEC.md                          ← Control doc: specification
+│   ├── BUILD_LOG.md                     ← Control doc: build history
+│   └── project-init/                    ← Copy to parent project root (submodule use)
+│       ├── CLAUDE.md
+│       ├── AGENTS.md
+│       ├── .windsurfrules
+│       ├── .github/copilot-instructions.md
+│       └── .cursor/rules/meta-prompts.md
 ├── LLM_NATIVE_SOFTWARE_ENGINEERING/     ← Parent meta-prompt
 │   ├── LLM_NATIVE_SOFTWARE_ENGINEERING.md
 │   └── README.md
@@ -196,16 +208,44 @@ This consistency means an LLM agent that understands one meta-prompt can navigat
 
 ## Getting Started
 
-**If you're building a new project with AI coding agents:**
+### For AI Agents
 
-1. Read [LLM-Native Software Engineering](https://github.com/pragnakar/LLM_NATIVE_SOFTWARE_ENGINEERING) first
-2. Set up your project with the Three Control Documents (AGENT.md, SPEC.md, BUILD_LOG.md)
-3. Write phase prompts and verification prompts before you start coding
-4. Invoke companion meta-prompts as your project's needs expand
+Point your AI agent at `BOOTSTRAP.md`. It contains the full imperative initialization sequence — the agent reads it, asks you about the project, selects the relevant companion meta-prompts, creates the `.build/` directory with `AGENT.md`, `SPEC.md`, and `BUILD_LOG.md`, and does not write a line of code until you approve the spec.
 
-**If you're exploring the methodology:**
+```
+BOOTSTRAP.md  ←  start here
+```
 
-Start with the parent meta-prompt. It contains the complete methodology, the evidence from the SAGE build, the evolution path toward agentic development, and references to all companion meta-prompts.
+### Using This Repo as a Submodule
+
+Add this repo as a submodule to your project, then copy the integration files for your AI tool from `templates/project-init/` to your project root. Replace `[META_PROMPTS_PATH]` in each file with the actual submodule path.
+
+| Tool | File to copy |
+|---|---|
+| Claude Code | `templates/project-init/CLAUDE.md` |
+| Any agent (universal) | `templates/project-init/AGENTS.md` |
+| Cursor | `templates/project-init/.cursor/rules/meta-prompts.md` |
+| Windsurf | `templates/project-init/.windsurfrules` |
+| GitHub Copilot | `templates/project-init/.github/copilot-instructions.md` |
+
+```bash
+# Add as submodule
+git submodule add https://github.com/pragnakar/META_PROMPTS meta_prompts
+
+# Copy your tool's entry point to project root (example for Claude Code)
+cp meta_prompts/templates/project-init/CLAUDE.md .
+# Then replace [META_PROMPTS_PATH] with meta_prompts in the copied file
+```
+
+### For a New Project (manual setup)
+
+1. Read `BOOTSTRAP.md` — it walks through the full setup
+2. Or use the standalone templates in `templates/` to create `.build/AGENT.md`, `.build/SPEC.md`, `.build/BUILD_LOG.md` directly
+3. Invoke companion meta-prompts as your project's needs expand
+
+### Exploring the methodology
+
+Start with the parent meta-prompt at `LLM_NATIVE_SOFTWARE_ENGINEERING/LLM_NATIVE_SOFTWARE_ENGINEERING.md`. It contains the complete philosophy, the evidence from the SAGE build, and the full ecosystem reference.
 
 ---
 
