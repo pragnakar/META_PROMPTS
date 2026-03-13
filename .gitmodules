@@ -18,3 +18,23 @@
 	path = UI-UX
 	url = https://github.com/pragnakar/UI-UX.git
 	branch = master
+[submodule "Security_Engineering"]
+	path = Security_Engineering
+	url = https://github.com/pragnakar/Security_Engineering.git
+	branch = main
+[submodule "MLOps"]
+	path = MLOps
+	url = https://github.com/pragnakar/MLOps.git
+	branch = main
+[submodule "API_Design"]
+	path = API_Design
+	url = https://github.com/pragnakar/API_Design.git
+	branch = main
+[submodule "Testing_Strategy"]
+	path = Testing_Strategy
+	url = https://github.com/pragnakar/Testing-Strategy.git
+	branch = main
+[submodule "Documentation"]
+	path = Documentation
+	url = https://github.com/pragnakar/Documentation.git
+	branch = main
