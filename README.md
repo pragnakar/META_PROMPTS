@@ -43,6 +43,11 @@ Each meta-prompt is an independent, evolving repository covering a distinct doma
 | **DevOps** | Runtime operations, monitoring, alerting, incident response, reliability engineering | [GitHub](https://github.com/pragnakar/DevOps) |
 | **Database** | Technology selection, schema design, indexing, query optimization, backup and recovery, data security | [GitHub](https://github.com/pragnakar/Database) |
 | **UI/UX** | User-centered design, information architecture, accessibility, responsive design, design systems | [GitHub](https://github.com/pragnakar/UI-UX) |
+| **Security Engineering** | Threat modeling, secure coding, vulnerability management | [GitHub](https://github.com/pragnakar/Security_Engineering) |
+| **MLOps** | Model training pipelines, experiment tracking, model deployment | [GitHub](https://github.com/pragnakar/MLOps) |
+| **API Design** | RESTful and GraphQL design standards, versioning, documentation | [GitHub](https://github.com/pragnakar/API_Design) |
+| **Testing Strategy** | Test architecture, coverage strategy, performance testing, test automation | [GitHub](https://github.com/pragnakar/Testing-Strategy) |
+| **Documentation** | Technical writing standards, API docs, user guides | [GitHub](https://github.com/pragnakar/Documentation) |
 
 ---
 
@@ -129,8 +134,23 @@ Meta_Prompts/
 ├── Database/                            ← Companion: data layer
 │   ├── Database.md
 │   └── README.md
-└── UI-UX/                              ← Companion: interface design
-    ├── UI-UX.md
+├── UI-UX/                              ← Companion: interface design
+│   ├── UI-UX.md
+│   └── README.md
+├── Security_Engineering/                ← Companion: security engineering
+│   ├── Security_Engineering.md
+│   └── README.md
+├── MLOps/                              ← Companion: machine learning operations
+│   ├── MLOps.md
+│   └── README.md
+├── API_Design/                         ← Companion: API design
+│   ├── API_Design.md
+│   └── README.md
+├── Testing_Strategy/                   ← Companion: testing strategy
+│   ├── Testing_Strategy.md
+│   └── README.md
+└── Documentation/                      ← Companion: documentation
+    ├── Documentation.md
     └── README.md
 ```
 
@@ -167,9 +187,9 @@ Areas of particular interest:
 
 ---
 
-## Future Meta-Prompts
+## Companion Meta-Prompts
 
-The ecosystem is extensible. Future companion meta-prompts may include:
+The ecosystem is extensible. The following companion meta-prompts are now part of the core Meta-Prompts ecosystem (each lives in its own repository and can be invoked as needed):
 
 | Domain | Purpose |
 |---|---|
@@ -179,7 +199,7 @@ The ecosystem is extensible. Future companion meta-prompts may include:
 | Testing Strategy | Test architecture, coverage strategy, performance testing |
 | Documentation | Technical writing standards, API docs, user guides |
 
-Each would follow the same canonical structure and integrate through cross-references with the parent and relevant companions.
+Each follows the same canonical structure and integrates through cross-references with the parent and relevant companions.
 
 ---
 
