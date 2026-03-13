@@ -38,3 +38,7 @@
 	path = Documentation
 	url = https://github.com/pragnakar/Documentation.git
 	branch = main
+[submodule "Scrum"]
+	path = Scrum
+	url = https://github.com/pragnakar/Scrum.git
+	branch = main
